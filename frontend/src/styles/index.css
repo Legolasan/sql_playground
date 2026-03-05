@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e0e0e0;
+  background-color: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Monaco editor overrides */
+.monaco-editor {
+  border-radius: 8px;
+}
+
+/* Results table */
+.results-table {
+  @apply w-full text-sm;
+}
+
+.results-table th {
+  @apply bg-gray-800 text-left px-4 py-2 font-medium text-gray-300 sticky top-0;
+}
+
+.results-table td {
+  @apply px-4 py-2 border-b border-gray-700;
+}
+
+.results-table tr:hover td {
+  @apply bg-gray-800/50;
+}
+
+/* Challenge difficulty stars */
+.difficulty-star {
+  @apply text-yellow-500;
+}
+
+.difficulty-star-empty {
+  @apply text-gray-600;
+}
+
+/* Status badges */
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+  @apply bg-green-900/50 text-green-400;
+}
+
+.badge-warning {
+  @apply bg-yellow-900/50 text-yellow-400;
+}
+
+.badge-error {
+  @apply bg-red-900/50 text-red-400;
+}
+
+.badge-info {
+  @apply bg-blue-900/50 text-blue-400;
+}
