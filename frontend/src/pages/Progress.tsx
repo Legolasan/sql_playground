@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getStats, getProgress, getSavedQueries } from '../api/client'
+import { getStats, getSavedQueries } from '../api/client'
 import { Trophy, Target, Database, Clock, Bookmark, Trash2 } from 'lucide-react'
 
 interface Stats {
