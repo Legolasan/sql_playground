@@ -19,7 +19,7 @@ async def get_schema(dataset: str):
 
     for table_name in inspector.get_table_names():
         columns = []
-        pk_columns = [col["name"] for col in inspector.get_pk_constraint(table_name).get("constrained_columns", [])]
+        pk_columns = inspector.get_pk_constraint(table_name).get("constrained_columns", [])
 
         for column in inspector.get_columns(table_name):
             columns.append({
