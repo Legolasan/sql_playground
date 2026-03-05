@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_BASE = '/api'
+// Use the base URL from Vite config in production
+const API_BASE = import.meta.env.BASE_URL + 'api'
 
 export const api = axios.create({
   baseURL: API_BASE,
